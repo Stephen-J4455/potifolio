@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* CSS will go here */
+    </style>
+  </head>
+  <body>
+    <!-- Header with Hamburger Menu -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Portfolio</a>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="animate-from-left">
+              Hi, I'm <span>Stephen Amuzu</span>
+            </h1>
+            <p class="animate-from-right">Web Developer & Designer</p>
+            <a href="#projects" class="btn animate-from-bottom">View My Work</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="profile-section">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="profile-content">
+            <div class="profile-image animate-from-left">
+              <img
+                src="https://via.placeholder.com/400"
+                alt="Profile Picture" />
+            </div>
+            <div class="profile-text animate-from-right">
+              <h3>Who I Am</h3>
+              <p>
+                I'm a passionate web developer with 5 years of experience
+                creating beautiful, functional websites and applications. I
+                specialize in front-end development but also have strong
+                back-end skills.
+              </p>
+              <div class="skills">
+                <h4>My Skills</h4>
+                <ul>
+                  <li>HTML5 & CSS3</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>React.js</li>
+                  <li>Node.js</li>
+                  <li>UI/UX Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title">My Projects</h2>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card animate-from-bottom">
+              <div class="project-image">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/signup-bfcf8.appspot.com/o/Empire2%20Original%2F20241115_110958_0000.png?alt=media&token=9106405d-9814-4a14-ad48-7f1f4e79a605"
+                  alt="CloudShop" />
+              </div>
+              <div class="project-info">
+                <h3>E-commerce Website</h3>
+                <p>
+                  A fully responsive e-commerce platform with cart functionality
+                  and payment integration.
+                </p>
+                <a href="https://stephen-j4455.github.io/JupiterOnlineShopping/" class="project-link">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card animate-from-bottom">
+              <div class="project-image">
+                <img
+                  src="https://via.placeholder.com/600x400"
+                  alt="Project 2" />
+              </div>
+              <div class="project-info">
+                <h3>Task Management App</h3>
+                <p>
+                  A productivity app for managing tasks with drag-and-drop
+                  functionality.
+                </p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card animate-from-bottom">
+              <div class="project-image">
+                <img
+                  src="https://via.placeholder.com/600x400"
+                  alt="Project 3" />
+              </div>
+              <div class="project-info">
+                <h3>Portfolio Template</h3>
+                <p>
+                  A customizable portfolio template for creatives and
+                  developers.
+                </p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-content">
+            <form class="contact-form animate-from-left">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info animate-from-right">
+              <h3>Contact Information</h3>
+              <p><i class="fas fa-envelope"></i> stevejupiter4@gmail.com</p>
+              <p><i class="fas fa-phone"></i> (233) 53-297-3455</p>
+              <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+          <div class="footer-links">
+            <a id="privacy" href="#">Privacy Policy</a>
+            <div class="policypage hide" class="hide">
+              <p>
+                Privacy Policy Last Updated: [8th May 2025] Thank you for
+                visiting my portfolio website. Your privacy is important to me,
+                and I am committed to protecting your personal data in
+                compliance with the General Data Protection Regulation (GDPR)
+                and other applicable privacy laws. This Privacy Policy explains
+                how I collect, use, and safeguard your information when you
+                visit StephenJ.github.io.
+              </p>
+              <p>
+                1. Information I Collect a. Personal Data If you contact me via
+                a contact form or email, I may collect: - Your name - Email
+                address - Any other information you voluntarily provide in your
+                message b. Automatically Collected Data When you visit my
+                website, certain non-personal data may be collected
+                automatically, including: - IP address - Browser type and
+                version - Pages visited and time spent on the site - Referring
+                website (if applicable) This data is collected via cookies and
+                analytics tools (e.g., Google Analytics) to improve user
+                experience.
+              </p>
+              <p>
+                2. How I Use Your Information I use the collected data for the
+                following purposes: - To respond to your inquiries - To analyze
+                website traffic and improve performance - To ensure compliance
+                with legal obligations
+              </p>
+              <p>
+                3. Cookies & Tracking Technologies My website may use cookies to
+                enhance functionality. You can disable cookies in your browser
+                settings, but this may affect site performance.
+              </p>
+              <p>
+                4. Data Sharing & Third Parties I do not sell or share your
+                personal data with third parties except: - Service Providers:
+                Trusted tools (e.g., hosting providers, Google Analytics) may
+                process data on my behalf. - Legal Requirements: If required by
+                law (e.g., court orders).
+              </p>
+              <p>
+                5. Data Retention I retain personal data only as long as
+                necessary to fulfill the purposes outlined in this policy or as
+                required by law.
+              </p>
+              <p>
+                6. Your Rights Under GDPR As a visitor from the EU, you have the
+                right to: - Access your personal data - Rectify incorrect
+                information - Request deletion of your data - Restrict or object
+                to processing - Data portability (where applicable) To exercise
+                these rights, contact me at
+                <a href="stevejupiter4@gmail.com">stevejupiter4@gmail.com</a>.
+              </p>
+              <p>
+                7. Security Measures I implement reasonable security measures to
+                protect your data, but no online transmission is 100% secure.
+              </p>
+              <p>
+                8. Changes to This Policy I may update this Privacy Policy
+                occasionally. The latest version will always be posted here with
+                the effective date.
+              </p>
+              <p>
+                9. Contact Me If you have questions about this Privacy Policy,
+                please reach out at: stevejupiter4@gmail.con Thank you for
+                visiting my portfolio!
+              </p>
+              <p>
+                --- This Privacy Policy is compliant with GDPR and other
+                applicable privacy laws. --- Note: If you use third-party
+                services (e.g., Google Analytics, contact form plugins), ensure
+                they are GDPR-compliant and mention them explicitly in your
+                policy. Adjust details (like your email and website URL)
+                accordingly.
+              </p>
+            </div>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
