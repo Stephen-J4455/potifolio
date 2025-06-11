@@ -3,17 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Stephen Amuzu</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* CSS will go here */
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fira+Mono&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   </head>
   <body>
     <!-- Header with Hamburger Menu -->
     <header class="header">
       <div class="container">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo"
+          ><i class="fa-solid fa-code"></i>Stephen Amuzu</a
+        >
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle day/night mode">
+          🌙
+        </button>
         <div class="hamburger-menu">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -21,11 +34,27 @@
         </div>
         <nav class="nav-menu">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
+            <li>
+              <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li>
+              <a href="#profile"><i class="fa-solid fa-user"></i> Profile</a>
+            </li>
+            <li>
+              <a href="#projects"
+                ><i class="fa-solid fa-diagram-project"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><i class="fa-solid fa-envelope"></i> Contact</a
+              >
+            </li>
+            <li>
+              <a href="#privacy"
+                ><i class="fa-solid fa-shield-halved"></i> Privacy</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -40,8 +69,12 @@
             <h1 class="animate-from-left">
               Hi, I'm <span>Stephen Amuzu</span>
             </h1>
-            <p class="animate-from-right">Web Developer & Designer</p>
-            <a href="#projects" class="btn animate-from-bottom">View My Work</a>
+            <p class="animate-from-right">
+              <i class="fa-solid fa-laptop-code"></i> Web Developer & Designer
+            </p>
+            <a href="#projects" class="btn animate-from-bottom"
+              ><i class="fa-solid fa-arrow-down"></i> View My Work</a
+            >
           </div>
         </div>
       </section>
@@ -49,29 +82,32 @@
       <!-- Profile Section -->
       <section id="profile" class="profile-section">
         <div class="container">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title">
+            <i class="fa-solid fa-user"></i> About Me
+          </h2>
           <div class="profile-content">
             <div class="profile-image animate-from-left">
               <img
-                src="https://via.placeholder.com/400"
+                src="https://randomuser.me/api/portraits/men/32.jpg"
                 alt="Profile Picture" />
             </div>
             <div class="profile-text animate-from-right">
-              <h3>Who I Am</h3>
+              <h3><i class="fa-solid fa-id-card"></i> Who I Am</h3>
               <p>
-                I'm a passionate web developer with 5 years of experience
-                creating beautiful, functional websites and applications. I
+                I'm a passionate web developer with 5+ years of experience
+                building beautiful, functional websites and applications. I
                 specialize in front-end development but also have strong
-                back-end skills.
+                back-end skills. I love clean code, creative UI, and solving
+                real-world problems.
               </p>
               <div class="skills">
-                <h4>My Skills</h4>
+                <h4><i class="fa-solid fa-lightbulb"></i> My Skills</h4>
                 <ul>
-                  <li>HTML5 & CSS3</li>
-                  <li>JavaScript (ES6+)</li>
-                  <li>React.js</li>
-                  <li>Node.js</li>
-                  <li>UI/UX Design</li>
+                  <li><i class="fa-brands fa-html5"></i> HTML5 & CSS3</li>
+                  <li><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
+                  <li><i class="fa-brands fa-react"></i> React.js</li>
+                  <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+                  <li><i class="fa-solid fa-palette"></i> UI/UX Design</li>
                 </ul>
               </div>
             </div>
@@ -82,56 +118,73 @@
       <!-- Projects Section -->
       <section id="projects" class="projects-section">
         <div class="container">
-          <h2 class="section-title">My Projects</h2>
+          <h2 class="section-title">
+            <i class="fa-solid fa-diagram-project"></i> My Projects
+          </h2>
           <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card animate-from-bottom">
               <div class="project-image">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/signup-bfcf8.appspot.com/o/Empire2%20Original%2F20241115_110958_0000.png?alt=media&token=9106405d-9814-4a14-ad48-7f1f4e79a605"
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
                   alt="CloudShop" />
               </div>
               <div class="project-info">
-                <h3>E-commerce Website</h3>
+                <h3>
+                  <i class="fa-solid fa-cart-shopping"></i> E-commerce Website
+                </h3>
                 <p>
                   A fully responsive e-commerce platform with cart functionality
                   and payment integration.
                 </p>
-                <a href="https://stephen-j4455.github.io/JupiterOnlineShopping/" class="project-link">View Project</a>
+                <a
+                  href="https://stephen-j4455.github.io/JupiterOnlineShopping/"
+                  class="project-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                  Project</a
+                >
               </div>
             </div>
-
             <!-- Project 2 -->
             <div class="project-card animate-from-bottom">
               <div class="project-image">
                 <img
-                  src="https://via.placeholder.com/600x400"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
                   alt="Project 2" />
               </div>
               <div class="project-info">
-                <h3>Task Management App</h3>
+                <h3>
+                  <i class="fa-solid fa-list-check"></i> Task Management App
+                </h3>
                 <p>
                   A productivity app for managing tasks with drag-and-drop
                   functionality.
                 </p>
-                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                  Project</a
+                >
               </div>
             </div>
-
             <!-- Project 3 -->
             <div class="project-card animate-from-bottom">
               <div class="project-image">
                 <img
-                  src="https://via.placeholder.com/600x400"
+                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80"
                   alt="Project 3" />
               </div>
               <div class="project-info">
-                <h3>Portfolio Template</h3>
+                <h3>
+                  <i class="fa-solid fa-user-astronaut"></i> Portfolio Template
+                </h3>
                 <p>
                   A customizable portfolio template for creatives and
                   developers.
                 </p>
-                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                  Project</a
+                >
               </div>
             </div>
           </div>
@@ -141,7 +194,9 @@
       <!-- Contact Section -->
       <section id="contact" class="contact-section">
         <div class="container">
-          <h2 class="section-title">Get In Touch</h2>
+          <h2 class="section-title">
+            <i class="fa-solid fa-envelope"></i> Get In Touch
+          </h2>
           <div class="contact-content">
             <form class="contact-form animate-from-left">
               <div class="form-group">
@@ -153,10 +208,14 @@
               <div class="form-group">
                 <textarea placeholder="Your Message" required></textarea>
               </div>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
             </form>
             <div class="contact-info animate-from-right">
-              <h3>Contact Information</h3>
+              <h3>
+                <i class="fa-solid fa-address-book"></i> Contact Information
+              </h3>
               <p><i class="fas fa-envelope"></i> stevejupiter4@gmail.com</p>
               <p><i class="fas fa-phone"></i> (233) 53-297-3455</p>
               <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
@@ -172,14 +231,36 @@
       </section>
     </main>
 
+    <div class="chat-bot">
+      <svg
+        width="38"
+        height="38"
+        viewBox="0 0 38 38"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Chat Bot Icon">
+        <circle cx="19" cy="19" r="19" fill="#00b4d8" />
+        <rect x="8" y="11" width="22" height="14" rx="5" fill="white" />
+        <ellipse cx="15" cy="18" rx="2" ry="2" fill="#00b4d8" />
+        <ellipse cx="19" cy="18" rx="2" ry="2" fill="#00b4d8" />
+        <ellipse cx="23" cy="18" rx="2" ry="2" fill="#00b4d8" />
+        <path d="M19 25L15 23H23L19 25Z" fill="#fff" />
+        <circle cx="13" cy="13" r="2" fill="#fff" />
+        <circle cx="25" cy="13" r="2" fill="#fff" />
+      </svg>
+    </div>
+    <div class="chat-page hidden">Hey</div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+          <p>&copy; 2025 Stephen Amuzu. All rights reserved.</p>
           <div class="footer-links">
-            <a id="privacy" href="#">Privacy Policy</a>
-            <div class="policypage hide" class="hide">
+            <a id="privacy" href="#"
+              ><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a
+            >
+            <div class="policypage hide">
               <p>
                 Privacy Policy Last Updated: [8th May 2025] Thank you for
                 visiting my portfolio website. Your privacy is important to me,
@@ -189,73 +270,10 @@
                 how I collect, use, and safeguard your information when you
                 visit StephenJ.github.io.
               </p>
-              <p>
-                1. Information I Collect a. Personal Data If you contact me via
-                a contact form or email, I may collect: - Your name - Email
-                address - Any other information you voluntarily provide in your
-                message b. Automatically Collected Data When you visit my
-                website, certain non-personal data may be collected
-                automatically, including: - IP address - Browser type and
-                version - Pages visited and time spent on the site - Referring
-                website (if applicable) This data is collected via cookies and
-                analytics tools (e.g., Google Analytics) to improve user
-                experience.
-              </p>
-              <p>
-                2. How I Use Your Information I use the collected data for the
-                following purposes: - To respond to your inquiries - To analyze
-                website traffic and improve performance - To ensure compliance
-                with legal obligations
-              </p>
-              <p>
-                3. Cookies & Tracking Technologies My website may use cookies to
-                enhance functionality. You can disable cookies in your browser
-                settings, but this may affect site performance.
-              </p>
-              <p>
-                4. Data Sharing & Third Parties I do not sell or share your
-                personal data with third parties except: - Service Providers:
-                Trusted tools (e.g., hosting providers, Google Analytics) may
-                process data on my behalf. - Legal Requirements: If required by
-                law (e.g., court orders).
-              </p>
-              <p>
-                5. Data Retention I retain personal data only as long as
-                necessary to fulfill the purposes outlined in this policy or as
-                required by law.
-              </p>
-              <p>
-                6. Your Rights Under GDPR As a visitor from the EU, you have the
-                right to: - Access your personal data - Rectify incorrect
-                information - Request deletion of your data - Restrict or object
-                to processing - Data portability (where applicable) To exercise
-                these rights, contact me at
-                <a href="stevejupiter4@gmail.com">stevejupiter4@gmail.com</a>.
-              </p>
-              <p>
-                7. Security Measures I implement reasonable security measures to
-                protect your data, but no online transmission is 100% secure.
-              </p>
-              <p>
-                8. Changes to This Policy I may update this Privacy Policy
-                occasionally. The latest version will always be posted here with
-                the effective date.
-              </p>
-              <p>
-                9. Contact Me If you have questions about this Privacy Policy,
-                please reach out at: stevejupiter4@gmail.con Thank you for
-                visiting my portfolio!
-              </p>
-              <p>
-                --- This Privacy Policy is compliant with GDPR and other
-                applicable privacy laws. --- Note: If you use third-party
-                services (e.g., Google Analytics, contact form plugins), ensure
-                they are GDPR-compliant and mention them explicitly in your
-                policy. Adjust details (like your email and website URL)
-                accordingly.
-              </p>
             </div>
-            <a href="#">Terms of Service</a>
+            <a href="#"
+              ><i class="fa-solid fa-file-contract"></i> Terms of Service</a
+            >
           </div>
         </div>
       </div>

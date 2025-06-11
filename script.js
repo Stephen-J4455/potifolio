@@ -104,3 +104,37 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("privacy").addEventListener("click", () => {
   document.querySelector(".policypage").classList.toggle("show");
 });
+
+// Theme toggle logic
+const themeToggle = document.getElementById("themeToggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+function setTheme(mode) {
+  if (mode === "night") {
+    document.body.classList.add("night");
+    themeToggle.textContent = "☀️";
+  } else {
+    document.body.classList.remove("night");
+    themeToggle.textContent = "🌙";
+  }
+}
+// Follow system theme
+function followSystemTheme() {
+  setTheme(prefersDark.matches ? "night" : "day");
+}
+// Initial theme
+followSystemTheme();
+// Listen for system theme changes
+prefersDark.addEventListener("change", followSystemTheme);
+// Manual toggle
+themeToggle.addEventListener("click", () => {
+  if (document.body.classList.contains("night")) {
+    setTheme("day");
+  } else {
+    setTheme("night");
+  }
+});
+
+const chatPage = document.querySelector("chat-page");
+const chatButton = document.querySelector("chat-bot");
+
+chatButton.addEventListener("click", () => {});
