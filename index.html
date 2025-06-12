@@ -249,7 +249,58 @@
         <circle cx="25" cy="13" r="2" fill="#fff" />
       </svg>
     </div>
-    <div class="chat-page hidden">Hey</div>
+    <!-- ...existing code... -->
+    <div class="chat-page hidden">
+      <div class="chat-window">
+        <div class="chat-messages" id="chatMessages"></div>
+        <form id="chatForm" class="chat-form">
+          <select id="chatSuggestions" class="chat-suggestions">
+            <option value="">💡</option>
+            <option>What is your name?</option>
+            <option>How are you?</option>
+            <option>Who are you?</option>
+            <option>What can you do?</option>
+            <option>What time is it?</option>
+            <option>What is today's date?</option>
+            <option>What day is today?</option>
+            <option>Tell me a joke?</option>
+            <option>Make me laugh?</option>
+            <option>Funny?</option>
+            <option>Who created you?</option>
+            <option>Who is your developer?</option>
+            <option>Tell me about your developer?</option>
+            <option>What technologies do you know?</option>
+            <option>What is web development?</option>
+            <option>What is frontend development?</option>
+            <option>What is backend development?</option>
+            <option>What is software engineering?</option>
+            <option>What programming languages do you use?</option>
+            <option>Can you show me your portfolio?</option>
+            <option>How can I contact you?</option>
+            <option>What projects have you built?</option>
+            <option>What is your purpose?</option>
+            <option>What is your favorite programming language?</option>
+            <option>What frameworks do you use?</option>
+            <option>Do you know about APIs?</option>
+            <option>Can you help me learn programming?</option>
+            <option>What is responsive design?</option>
+            <option>What is version control?</option>
+            <option>What is a chatbot?</option>
+            <option>What is machine learning?</option>
+            <option>What is your favorite project?</option>
+            <option>Do you have a resume?</option>
+            <option>Can you tell me about yourself?</option>
+          </select>
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+            required />
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

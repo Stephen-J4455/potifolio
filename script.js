@@ -134,7 +134,71 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-const chatPage = document.querySelector("chat-page");
-const chatButton = document.querySelector("chat-bot");
+const chatPage = document.querySelector(".chat-page");
+const chatButton = document.querySelector(".chat-bot");
 
-chatButton.addEventListener("click", () => {});
+chatButton.addEventListener("click", () => {
+  chatPage.classList.toggle("hidden");
+});
+
+// python request
+
+async function typeBotResponse(text, container) {
+  container.innerHTML = ""; // Clear previous content
+  const words = text.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    container.innerHTML += (i > 0 ? " " : "") + words[i];
+    container.scrollTop = container.scrollHeight;
+    await new Promise((res) => setTimeout(res, 80)); // Adjust speed here (ms per word)
+  }
+}
+
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const chatMessages = document.getElementById("chatMessages");
+chatForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const userMsg = chatInput.value.trim();
+  if (!userMsg) return;
+
+  // Display user message
+  chatMessages.innerHTML += `<div class="chat-msg user">${userMsg}</div>`;
+  chatInput.value = "";
+
+  // Show AI typing placeholder
+  const typingDiv = document.createElement("div");
+  typingDiv.className = "chat-msg bot ai-typing";
+  typingDiv.textContent = "Stephen is typing...";
+  chatMessages.appendChild(typingDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Send to backend
+  const res = await fetch("https://steve-t3ab.onrender.com/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userMsg }),
+  });
+  const data = await res.json();
+
+  // Remove typing placeholder
+  chatMessages.removeChild(typingDiv);
+
+  // Create bot message container
+  const botDiv = document.createElement("div");
+  botDiv.className = "chat-msg bot";
+  chatMessages.appendChild(botDiv);
+
+  // Typing effect
+  await typeBotResponse(data.response, botDiv);
+
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+});
+
+const chatSuggestions = document.getElementById("chatSuggestions");
+chatSuggestions.addEventListener("change", function () {
+  if (this.value) {
+    chatInput.value = this.value;
+    chatInput.focus();
+    this.selectedIndex = 0; // Reset dropdown to placeholder
+  }
+});
