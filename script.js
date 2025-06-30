@@ -138,9 +138,12 @@ const chatPage = document.querySelector(".chat-page");
 const chatButton = document.querySelector(".chat-bot");
 
 chatButton.addEventListener("click", () => {
-  chatPage.classList.toggle("hidden");
+  chatPage.classList.remove("hidden");
 });
 
+document.getElementById("closeChat").addEventListener("click", () => {
+  chatPage.classList.add("hidden");
+});
 // python request
 
 async function typeBotResponse(text, container) {
@@ -180,18 +183,28 @@ chatForm.addEventListener("submit", async (e) => {
   });
   const data = await res.json();
 
-  // Remove typing placeholder
-  chatMessages.removeChild(typingDiv);
+chatMessages.removeChild(typingDiv);
 
-  // Create bot message container
-  const botDiv = document.createElement("div");
-  botDiv.className = "chat-msg bot";
-  chatMessages.appendChild(botDiv);
+// Create bot message container with avatar
+const botMsgCtn = document.createElement("div");
+botMsgCtn.className = "botMsgCtn";
 
-  // Typing effect
-  await typeBotResponse(data.response, botDiv);
+const botImg = document.createElement("img");
+botImg.id = "botId";
+botImg.src = "assests/stj.jpg";
+botImg.alt = "";
 
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+const botDiv = document.createElement("div");
+botDiv.className = "chat-msg bot";
+
+botMsgCtn.appendChild(botImg);
+botMsgCtn.appendChild(botDiv);
+chatMessages.appendChild(botMsgCtn);
+
+// Typing effect
+await typeBotResponse(data.response, botDiv);
+
+chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 const chatSuggestions = document.getElementById("chatSuggestions");

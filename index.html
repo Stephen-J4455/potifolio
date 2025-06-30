@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stephen Amuzu</title>
+    <title>Stephen Amuzu | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,23 +15,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   </head>
   <body>
-    <!-- Header with Hamburger Menu -->
-    <header class="header">
-      <div class="container">
-        <a href="#" class="logo"
-          ><i class="fa-solid fa-code"></i>Stephen Amuzu</a
-        >
-        <button
-          class="theme-toggle"
-          id="themeToggle"
-          title="Toggle day/night mode">
-          🌙
-        </button>
-        <div class="hamburger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
+    <!-- Header -->
+    <header class="header glass">
+      <div class="container header-flex">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-code"><span>Stephen Amuzu</span></i>
+        </a>
         <nav class="nav-menu">
           <ul>
             <li>
@@ -51,186 +40,189 @@
               >
             </li>
             <li>
-              <a href="#privacy"
+              <a href="#" id="privacy"
                 ><i class="fa-solid fa-shield-halved"></i> Privacy</a
               >
             </li>
           </ul>
         </nav>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle day/night mode">
+          🌙
+        </button>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="animate-from-left">
-              Hi, I'm <span>Stephen Amuzu</span>
-            </h1>
-            <p class="animate-from-right">
-              <i class="fa-solid fa-laptop-code"></i> Web Developer & Designer
-            </p>
-            <a href="#projects" class="btn animate-from-bottom"
-              ><i class="fa-solid fa-arrow-down"></i> View My Work</a
-            >
+    <!-- Hero Section -->
+    <section id="home" class="hero glass animate-from-top">
+      <div class="container hero-content">
+        <div class="hero-image">
+          <img src="assests/stj.jpg" alt="Stephen Amuzu" />
+        </div>
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="highlight">Stephen Amuzu</span></h1>
+          <p>
+            Creative <span class="highlight">Web Developer</span> &
+            <span class="highlight">Problem Solver</span>.<br />
+            I build beautiful, functional, and modern web experiences.
+          </p>
+          <a href="#projects" class="btn hero-btn"
+            >See My Work <i class="fa-solid fa-arrow-down"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section glass">
+      <div class="container profile-content">
+        <!-- <div class="profile-image animate-from-left">
+          <img src="assests/stj.jpg" alt="Profile Picture" />
+        </div> -->
+        <div class="profile-text animate-from-right">
+          <h3><i class="fa-solid fa-id-card"></i> About Me</h3>
+          <p>
+            I'm a passionate web developer with 5+ years of experience building
+            beautiful, functional websites and applications. I specialize in
+            front-end development but also have strong back-end skills. I love
+            clean code, creative UI, and solving real-world problems.
+          </p>
+          <div class="skills">
+            <h4><i class="fa-solid fa-lightbulb"></i> My Skills</h4>
+            <ul>
+              <li><i class="fa-brands fa-html5"></i> HTML5 & CSS3</li>
+              <li><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
+              <li><i class="fa-brands fa-react"></i> React.js</li>
+              <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+              <li><i class="fa-solid fa-palette"></i> UI/UX Design</li>
+              <li><i class="fa-brands fa-python"></i> Python</li>
+              <li><i class="fa-solid fa-code"></i> C++</li>
+              <li><i class="fa-solid fa-robot"></i> Machine Learning</li>
+              <li><i class="fa-brands fa-java"></i> Native Java</li>
+              <li><i class="fa-solid fa-terminal"></i> Prompt Engineering</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Profile Section -->
-      <section id="profile" class="profile-section">
-        <div class="container">
-          <h2 class="section-title">
-            <i class="fa-solid fa-user"></i> About Me
-          </h2>
-          <div class="profile-content">
-            <div class="profile-image animate-from-left">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section glass">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fa-solid fa-diagram-project"></i> My Projects
+        </h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card animate-from-bottom">
+            <div class="project-image">
               <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="Profile Picture" />
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+                alt="CloudShop" />
             </div>
-            <div class="profile-text animate-from-right">
-              <h3><i class="fa-solid fa-id-card"></i> Who I Am</h3>
-              <p>
-                I'm a passionate web developer with 5+ years of experience
-                building beautiful, functional websites and applications. I
-                specialize in front-end development but also have strong
-                back-end skills. I love clean code, creative UI, and solving
-                real-world problems.
-              </p>
-              <div class="skills">
-                <h4><i class="fa-solid fa-lightbulb"></i> My Skills</h4>
-                <ul>
-                  <li><i class="fa-brands fa-html5"></i> HTML5 & CSS3</li>
-                  <li><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
-                  <li><i class="fa-brands fa-react"></i> React.js</li>
-                  <li><i class="fa-brands fa-node-js"></i> Node.js</li>
-                  <li><i class="fa-solid fa-palette"></i> UI/UX Design</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="projects-section">
-        <div class="container">
-          <h2 class="section-title">
-            <i class="fa-solid fa-diagram-project"></i> My Projects
-          </h2>
-          <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card animate-from-bottom">
-              <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
-                  alt="CloudShop" />
-              </div>
-              <div class="project-info">
-                <h3>
-                  <i class="fa-solid fa-cart-shopping"></i> E-commerce Website
-                </h3>
-                <p>
-                  A fully responsive e-commerce platform with cart functionality
-                  and payment integration.
-                </p>
-                <a
-                  href="https://stephen-j4455.github.io/JupiterOnlineShopping/"
-                  class="project-link"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
-                  Project</a
-                >
-              </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card animate-from-bottom">
-              <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
-                  alt="Project 2" />
-              </div>
-              <div class="project-info">
-                <h3>
-                  <i class="fa-solid fa-list-check"></i> Task Management App
-                </h3>
-                <p>
-                  A productivity app for managing tasks with drag-and-drop
-                  functionality.
-                </p>
-                <a href="#" class="project-link"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
-                  Project</a
-                >
-              </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card animate-from-bottom">
-              <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80"
-                  alt="Project 3" />
-              </div>
-              <div class="project-info">
-                <h3>
-                  <i class="fa-solid fa-user-astronaut"></i> Portfolio Template
-                </h3>
-                <p>
-                  A customizable portfolio template for creatives and
-                  developers.
-                </p>
-                <a href="#" class="project-link"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
-                  Project</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <h2 class="section-title">
-            <i class="fa-solid fa-envelope"></i> Get In Touch
-          </h2>
-          <div class="contact-content">
-            <form class="contact-form animate-from-left">
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" class="btn">
-                <i class="fa-solid fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-            <div class="contact-info animate-from-right">
+            <div class="project-info">
               <h3>
-                <i class="fa-solid fa-address-book"></i> Contact Information
+                <i class="fa-solid fa-cart-shopping"></i> E-commerce Website
               </h3>
-              <p><i class="fas fa-envelope"></i> stevejupiter4@gmail.com</p>
-              <p><i class="fas fa-phone"></i> (233) 53-297-3455</p>
-              <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
+              <p>
+                A fully responsive e-commerce platform with cart functionality
+                and payment integration.
+              </p>
+              <a
+                href="https://stephen-j4455.github.io/JupiterOnlineShopping/"
+                class="project-link"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card animate-from-bottom">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+                alt="Project 2" />
+            </div>
+            <div class="project-info">
+              <h3>
+                <i class="fa-solid fa-list-check"></i> Task Management App
+              </h3>
+              <p>
+                A productivity app for managing tasks with drag-and-drop
+                functionality.
+              </p>
+              <a href="#" class="project-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-card animate-from-bottom">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80"
+                alt="Project 3" />
+            </div>
+            <div class="project-info">
+              <h3>
+                <i class="fa-solid fa-user-astronaut"></i> Portfolio Template
+              </h3>
+              <p>
+                A customizable portfolio template for creatives and developers.
+              </p>
+              <a href="#" class="project-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project</a
+              >
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section glass">
+      <div class="container contact-content">
+        <form class="contact-form animate-from-left">
+          <h3><i class="fa-solid fa-paper-plane"></i> Send a Message</h3>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-paper-plane"></i> Send
+          </button>
+        </form>
+        <div class="contact-info animate-from-right">
+          <h3><i class="fa-solid fa-address-book"></i> Contact Info</h3>
+          <p><i class="fas fa-envelope"></i> stevejupiter4@gmail.com</p>
+          <p><i class="fas fa-phone"></i> (233) 53-297-3455</p>
+          <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat Bot Button -->
     <div class="chat-bot">
       <svg
         width="38"
@@ -249,10 +241,41 @@
         <circle cx="25" cy="13" r="2" fill="#fff" />
       </svg>
     </div>
-    <!-- ...existing code... -->
     <div class="chat-page hidden">
+      <!-- Close SVG Icon -->
+      <svg
+        id="closeChat"
+        width="28"
+        height="28"
+        viewBox="0 0 28 28"
+        fill="none"
+        aria-label="Close Chat"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="14" fill="#e0e0e0" />
+        <line
+          x1="9"
+          y1="9"
+          x2="19"
+          y2="19"
+          stroke="#333"
+          stroke-width="2"
+          stroke-linecap="round" />
+        <line
+          x1="19"
+          y1="9"
+          x2="9"
+          y2="19"
+          stroke="#333"
+          stroke-width="2"
+          stroke-linecap="round" />
+      </svg>
       <div class="chat-window">
-        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="botMsgCtn">
+            <img id="botId" src="assests/stj.jpg" alt="" srcset="" />
+            <div class="chat-msg bot">Hi ,how can I help you?</div>
+          </div>
+        </div>
         <form id="chatForm" class="chat-form">
           <select id="chatSuggestions" class="chat-suggestions">
             <option value="">💡</option>
@@ -297,13 +320,22 @@
             placeholder="Type your message..."
             autocomplete="off"
             required />
-          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+          <button type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              width="24px"
+              height="24px">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
         </form>
       </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass">
       <div class="container">
         <div class="footer-content">
           <p>&copy; 2025 Stephen Amuzu. All rights reserved.</p>
@@ -329,7 +361,6 @@
         </div>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
